@@ -16,4 +16,8 @@ export class CsvService {
     data.append('cloud_name', environment.CLOUD_NAME);
     return this.http.post(environment.URL, data);
   }
+
+  fetchResult(url) {
+    return this.http.post('https://adx-api-by-sai.herokuapp.com/', { url });
+  }
 }
